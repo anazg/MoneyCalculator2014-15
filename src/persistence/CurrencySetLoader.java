@@ -5,9 +5,15 @@ import model.CurrencySet;
 
 public class CurrencySetLoader {
 
-    private final Currency[] set;
+    public CurrencySetLoader() {
+    }
     
     public CurrencySet load(){
-        set = 
+        Currency euro = new Currency("EUR","Euro","€");
+        Currency dollar = new Currency("USD","Dólar americano","€");
+        CurrencySet currencySet = new CurrencySet();
+        currencySet.addCurrency(euro.getCode(), euro);
+        currencySet.addCurrency(dollar.getCode(), dollar);
+        return currencySet;
     }
 }

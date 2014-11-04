@@ -7,8 +7,8 @@ import persistence.CurrencySetLoader;
 public class MoneyCalculator {
 
     public static void main(String[] args) {
-        CurrencySet currencySet = new CurrencySetLoader.load();
-        new ExchangeOperation.execute(currencySet);
+        CurrencySet currencySet = CurrencySetLoader.load();
+        ExchangeOperation.execute(currencySet);
         
     }
 

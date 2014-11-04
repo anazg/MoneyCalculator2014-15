@@ -14,11 +14,11 @@ public class ExchangeOperation {
     public ExchangeOperation() {
     }
     
-    public void execute(CurrencySet currencySet){
+    public static void execute(CurrencySet currencySet){
         Exchange exchange= new ExchangeDialog(currencySet).getExchange();
-        ExchangeRate exchangeRate = new ExchangeRateLoader.load(exchange.getMoney().getCurrency(),
+        ExchangeRate exchangeRate = ExchangeRateLoader.load(exchange.getMoney().getCurrency(),
                                     exchange.getCurrency());
-        Money result = new Exchanger.exchange(exchange.getMoney(), exchangeRate);
+        Money result = Exchanger.exchange(exchange.getMoney(), exchangeRate);
         new MoneyDisplay().display(result);
     }
 

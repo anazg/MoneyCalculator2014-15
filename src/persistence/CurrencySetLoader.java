@@ -8,7 +8,7 @@ public class CurrencySetLoader {
     public CurrencySetLoader() {
     }
     
-    public CurrencySet load(){
+    public static CurrencySet load(){
         Currency euro = new Currency("EUR","Euro","€");
         Currency dollar = new Currency("USD","Dólar americano","€");
         CurrencySet currencySet = new CurrencySet();

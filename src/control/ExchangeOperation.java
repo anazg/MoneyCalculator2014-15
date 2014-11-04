@@ -11,15 +11,15 @@ import ui.MoneyDisplay;
 
 public class ExchangeOperation {
 
-    public ExchangeOperation() {
-    }
-    
     public static void execute(CurrencySet currencySet){
-        Exchange exchange= new ExchangeDialog(currencySet).getExchange();
+        Exchange exchange = readExchange(currencySet);
         ExchangeRate exchangeRate = ExchangeRateLoader.load(exchange.getMoney().getCurrency(),
                                     exchange.getCurrency());
         Money result = Exchanger.exchange(exchange.getMoney(), exchangeRate);
         new MoneyDisplay().display(result);
     }
 
+    private static Exchange readExchange(CurrencySet currencySet){
+        return new ExchangeDialog(currencySet).getExchange();
+    }
 }

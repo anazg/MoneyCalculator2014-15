@@ -1,7 +1,7 @@
-package process;
+package moneycalculator.process;
 
-import model.ExchangeRate;
-import model.Money;
+import moneycalculator.model.ExchangeRate;
+import moneycalculator.model.Money;
 
 public class Exchanger {
     

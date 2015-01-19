@@ -1,6 +1,6 @@
-package ui;
+package moneycalculator.ui;
 
-import model.Money;
+import moneycalculator.model.Money;
 
 public class MoneyDisplay {
 

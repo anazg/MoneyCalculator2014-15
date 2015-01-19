@@ -1,9 +1,9 @@
-package ui;
+package moneycalculator.obsolete;
 
-import model.Currency;
-import model.CurrencySet;
-import model.Exchange;
-import model.Money;
+import moneycalculator.model.Currency;
+import moneycalculator.model.CurrencySet;
+import moneycalculator.model.Exchange;
+import moneycalculator.model.Money;
 
 public class ExchangeDialog {
     
